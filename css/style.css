@@ -1,0 +1,261 @@
+/* --------- ОБНУЛЕННЯ СТИЛІВ ТЕГІВ ------------ */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+html,
+body{
+	height: 100%;
+}
+body {
+	line-height: 1;
+   background: url("../img/space.jpg") 0 0 no-repeat;
+   background-size: 1500px;
+   
+}
+
+/*  ======================================  */
+[class*="__container"] {
+   max-width: 1000px;
+   margin: 0 auto;
+}
+.wrapper {
+   position: relative;
+   min-height: 100%;
+   overflow: hidden;
+  
+}
+
+.main__container {
+   text-align: center;
+}
+.main__earth {
+  
+   
+}
+.main__earth img {
+   width: 500px;
+   position: relative;
+   z-index: 1;
+   
+}
+.moon__img {
+   
+}
+.planets__moon img {
+   width: 250px;
+   position: absolute;
+   top: 250px;
+   left: 450px;
+   animation: orbita 10s linear infinite ;
+   z-index: 0;
+}
+
+@keyframes orbita {
+   0% {
+      width: 100px;
+      z-index: 0;
+   }
+   25% {
+     z-index: 0;
+   }
+   50% {
+      top: 0px;
+      left: 900px;
+      width: 300px;
+      
+   }
+   100% {
+      width: 100px;
+      top: 250px;
+      left: 450px;
+      z-index: 2;
+      transform: rotate(360deg);
+   }
+}
+
+.planets__sun img {
+   width: 250px;
+   position: absolute;
+   top: 350px;
+   right: 300px;
+   z-index: 0;
+   animation: sunshine 10s linear 1s infinite;
+}
+
+@keyframes sunshine {
+   0% { 
+   }
+   25% {
+      z-index: 2;
+   }
+  
+   50% {
+      top: 50px;
+      right: 850px;
+      width: 100px;
+   }
+   60% {
+      z-index: 0;
+   }
+   100% {
+      transform: rotate(360deg);
+      
+   }
+}
+
+.planets__nlo {
+   position: relative;
+
+
+}
+.planets__nlo img {
+   width: 200px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   animation: nlo 15s linear  infinite;
+}
+.planets__nlo:hover img {
+   width: 400px;
+   transform: rotate(-20deg);
+   z-index: 0;
+}
+
+@keyframes nlo {
+   0% {
+
+   }
+   25% {
+      z-index: 0;
+      top: -200px;
+      left: 800px;
+      transform: rotate(-20deg);
+   }
+   50% {
+      top: -500px;
+      left: 1000px;
+      z-index: 0;
+      transform: rotate(30deg);
+      width: 150px;
+   }
+   75% {
+      z-index: 0;
+      
+   }
+   100% {
+      top: 0;
+      left: 0;
+      
+      
+   }
+}
+
+.header__astronaut {
+   position: relative;
+
+}
+.header__astronaut img {
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   width: 100px;
+   animation: astronaut 10s linear infinite;
+}
+
+@keyframes astronaut {
+   0% {
+      transform: rotate(360deg);
+   }
+   50% {
+      top: 50px;
+      left: 50px;
+      width: 50px;
+   }
+   75% {
+      top: 80px;
+      left: 100px;
+   }
+   100% {
+      top: 20px;
+      left: 20px;
+   }
+}
+
+.planets__rocket {
+   position: relative;
+}
+.planets__rocket img {
+   height: 150px;
+   width: 50px;
+   position: absolute;
+   top: -40px;
+   right: -120px;
+   transform: rotate(45deg);
+
+}
+
+.rocket__fire {
+   position: relative;
+}
+.rocket__fire img {
+   height: 100px;
+   position: absolute;
+   top: 55px;
+   right: -45px;
+   transform: rotate(220deg);
+   animation: fire 10s linear infinite;
+}
+
+@keyframes fire {
+   0% {
+      scale: (1.1);
+      transform: rotate(220deg);
+   }
+   50% {
+      scale: (5);
+      transform: rotate(220deg);
+      height: 150px;
+      top: 50px;
+      right: -40px;
+   }
+   100% {
+      transform: scale(2);
+     
+      transform: rotate(220deg);
+   }
+}
